@@ -1,1 +1,1 @@
-# Principios SOLID en C# curso
+# Principios SOLID en C#
