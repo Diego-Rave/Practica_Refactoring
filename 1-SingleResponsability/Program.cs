@@ -1,5 +1,8 @@
 ﻿using SingleResponsability;
 
 StudentRepository studentRepository = new();
-studentRepository.Export();
-Console.WriteLine("Proceso Completado");
+var formatter = new CsvFormatter();
+var exporter = new FileExporter();
+
+string csvData = formatter.FormatStudentsToCsv(studentRepository.GetAll());
+exporter.SaveToFile(csvData, "Students.csv");
