@@ -1,6 +1,6 @@
 namespace InterfaceSegregation
 {
-    public class Developer : IActivities
+    public class Developer : IWorkTeamActivities, IDevelopActivities
     {
         public Developer()
         {
@@ -16,19 +16,15 @@ namespace InterfaceSegregation
             throw new ArgumentException();
         }
 
-        public void Design() 
-        {
-            throw new ArgumentException();
-        }
-
         public void Develop() 
         {
             Console.WriteLine("I'm developing the functionalities required");
         }
 
-        public void Test() 
+        public void Design() 
         {
-            throw new ArgumentException();
+            Console.WriteLine("I'm designing new futures");
         }
+
     }
 }
